@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BlokAura – Blok Bulmaca & Düello</title>
+<meta name="description" content="BlokAura: blok bulmaca ve arkadaşınla düello. Google Play'den ücretsiz indir.">
+<meta property="og:title" content="BlokAura – Blok Bulmaca & Düello">
+<meta property="og:description" content="Blok bulmaca ve arkadaşınla düello. Google Play'den ücretsiz indir.">
+<meta property="og:image" content="https://ibrahimmkenan-pixel.github.io/indir/icon.png">
+<meta property="og:url" content="https://ibrahimmkenan-pixel.github.io/indir/">
+<link rel="icon" href="icon.png">
+<style>
+  :root { --bg1:#3a1d8f; --bg2:#0d0a2e; --gold:#ffd447; --txt:#ece8ff; }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: radial-gradient(120% 80% at 50% 0%, var(--bg1), var(--bg2)); color:var(--txt);
+         display:flex; align-items:center; justify-content:center; padding:24px 16px; text-align:center; }
+  main { width:100%; max-width:420px; }
+  .logo { width:78%; max-width:320px; height:auto; filter: drop-shadow(0 8px 18px rgba(0,0,0,.5)); }
+  h1 { font-size:22px; margin:14px 0 6px; }
+  p { margin:6px 0; opacity:.9; line-height:1.45; }
+  .btn { display:block; margin:22px auto 10px; padding:18px 20px; border-radius:18px; font-size:20px; font-weight:800;
+         text-decoration:none; color:#1a0d40; background: linear-gradient(#ffe27a, #ffb21f);
+         box-shadow: 0 6px 0 #b8770a, 0 10px 24px rgba(0,0,0,.4); }
+  .btn:active { transform: translateY(3px); box-shadow: 0 3px 0 #b8770a; }
+  .alt { display:inline-block; margin-top:8px; color:var(--txt); font-size:15px; }
+  .hint { margin-top:22px; font-size:13px; opacity:.75; }
+  ul { list-style:none; padding:0; margin:16px 0 0; font-size:15px; }
+  li { margin:6px 0; }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="logo.png" alt="BlokAura">
+  <h1>Blok Bulmaca &amp; Düello</h1>
+  <p>Blokları yerleştir, satırları patlat, arkadaşına meydan oku!</p>
+  <ul>
+    <li>🧩 Bölümler, klasik ve süreli mod</li>
+    <li>⚔️ Arkadaşına düello daveti gönder</li>
+    <li>🎁 Günlük ödüller ve temalar</li>
+  </ul>
+  <a class="btn" id="play" href="https://play.google.com/store/apps/details?id=com.blokaura.game">▶ Google Play'den İndir</a>
+  <a class="alt" href="https://play.google.com/store/apps/details?id=com.blokaura.game">Açılmazsa buraya dokun</a>
+  <p class="hint">Instagram içinde açılmazsa sağ üstteki <b>⋯</b> menüsünden <b>“Tarayıcıda aç”</b>ı seç.</p>
+</main>
+<script>
+  // Android: doğrudan Play Store uygulamasını açmayı dene (Instagram tarayıcısı https Play linkinde takılabiliyor)
+  var web = "https://play.google.com/store/apps/details?id=com.blokaura.game";
+  var intent = "intent://details?id=com.blokaura.game#Intent;scheme=market;package=com.android.vending;S.browser_fallback_url=" + encodeURIComponent(web) + ";end";
+  if (/android/i.test(navigator.userAgent)) {
+    document.getElementById("play").href = intent;
+    setTimeout(function () { window.location.href = intent; }, 400);
+  }
+</script>
+</body>
+</html>
